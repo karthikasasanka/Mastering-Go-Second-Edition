@@ -8,6 +8,7 @@ import (
 func writeToChannel(c chan int, x int) {
 	fmt.Println("1", x)
 	c <- x
+	fmt.Println("cane after reading c ")
 	close(c)
 	fmt.Println("2", x)
 }

@@ -4,6 +4,11 @@ import (
 	"fmt"
 )
 
+func ffff() {
+	const h = 7867
+}
+
 func main() {
-	fmt.Println("Creating WebAssembly code from Go!")
+	ffff()
+	fmt.Println(h)
 }

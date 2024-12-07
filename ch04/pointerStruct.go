@@ -25,11 +25,6 @@ func retStructure(n, s string, h int32) myStructure {
 }
 
 func main() {
-	s1 := createStruct("Mihalis", "Tsoukalos", 123)
-	s2 := retStructure("Mihalis", "Tsoukalos", 123)
-	fmt.Println((*s1).Name)
-	fmt.Println(s1.Name)
-	fmt.Println(s2.Name)
-	fmt.Println(s1)
-	fmt.Println(s2)
+	s1l := new([]myStructure)
+	fmt.Println(s1l)
 }
