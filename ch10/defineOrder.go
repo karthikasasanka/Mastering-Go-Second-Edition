@@ -5,21 +5,21 @@ import (
 	"time"
 )
 
-func A(a, b chan struct{}) {
-	<-a
+func A(x, y chan struct{}) {
+	<-x
 	fmt.Println("A()!")
 	time.Sleep(time.Second)
-	close(b)
+	close(y)
 }
 
-func B(a, b chan struct{}) {
-	<-a
+func B(y, z chan struct{}) {
+	<-y
 	fmt.Println("B()!")
-	close(b)
+	close(z)
 }
 
-func C(a chan struct{}) {
-	<-a
+func C(z chan struct{}) {
+	<-z
 	fmt.Println("C()!")
 }
 
